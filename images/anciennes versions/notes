@@ -1,0 +1,76 @@
+rond = 1
+carré = 2
+hexagone = 3
+W = 4
+
+face init = celle où il y a le numéro, dans le sens du numéro pour l'orientation
+_______________________________________________________________________________________________________________________
+
+cube;liste,des,faces,(avec,leur,forme)
+
+1;-1,2,4,6,8,6
+2;5,6,7,2,4,-9
+5;8,6,3,-4,9,7
+3;4,-6,9,4,6,1
+_______________________________________________________________________________________________________________________
+
+notes (à implémenter ?)
+
+lecture de toutes les données dans le même fichier :
+- liste des cubes
+- liste des cubes à utiliser
+- forme à réaliser
+
+ou alors :
+- un fichier de liste des cubes
+- un fichier "ordres" avec la forme et les cubes à utiliser
+
+sortie en écriture dans deux fichiers :
+- un avec les solutions trouvées
+- un avec les solutions abandonnées là où elles se sont arrêtées (pour vérifier qu'il teste toutes les possibilités)
+
+forme de la retranscription des solutions ?
+- n° du cube + orientation (id de la face inferieur) + orientation des faces (+1/-1) + id de la face devant
+- n° du cube + id faces inf et devant
+- matrice de la forme contenant les objet cubes (caractéristiques à récupérer dans le dico correspondant)
+_______________________________________________________________________________________________________________________
+
+test à faire :
+rotation d'un cube -> définir les faces d'un cube, le faire tourner, printer les faces
+deplacement d'un cube -> définir la forme, déplacer le cube, printer sa position
+initialisation d'un figure -> vérifier la création de la matrice
+comparaison de 2 cube -> créer puis comparer
+placement d'un cube -> créer une figure, un cube et placer le cube dans la figure
+liste des voisins -> placer deux cubes dans une figure et verifier la maj de la liste
+sys.exit -> est ce que ça marche vraiment ?
+_______________________________________________________________________________________________________________________
+
+encore à faire :
+- gestion des voisins
+- comparaison de 2 cubes
+- apprendre à faire de l'objet
+- définir quelle faces sont en contacte lorsque 2 cubes sont voisin
+- télécharger un IDE python
+- dictionnaire avec les objets cubes ?
+- récupération des variables dans un fichier
+- verifier que l'on peut modifier un dictionnaire (pour la retranscription des solution : obtenir les faces et l'orientation du cube juste avec son numero) --> oui
+- apprendre à faire des testes unitaires
+
+
+questions à poser 
+- avec un cube j'ai sa position comment avoir le cube à partir de la position ? --> mettre des objet dans la matrice -> obtenir les voisins
+
+
+
+pour placer un cube
+- metre an place la liste des voisins postentiels
+- faire les comparaisons avec ces voisins
+- si ok placer et mete à jour les listes des voisins
+- si non passer à la suite
+
+
+_______________________________________________________________________________________________________________________
+notes du 24
+le pb de clé vennait de l'appel
+la MAJ de la liste des voisins ne marche pas
+il faut une fonction pour enlever un cube (à partir de sa position ou de son n° ?]
